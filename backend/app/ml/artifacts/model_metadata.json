@@ -1,0 +1,138 @@
+{
+  "selected_model": "random_forest",
+  "model_version": "1.0.0",
+  "trained_at": "2026-11-10T10:33:00.051759+00:00",
+  "dataset": {
+    "name": "Hannousse & Yahiouche (2021) Phishing URL Benchmark Dataset",
+    "source_url": "https://huggingface.co/datasets/pirocheto/phishing-url",
+    "total_evaluated_rows": 11424,
+    "train_rows": 7996,
+    "validation_rows": 1714,
+    "test_rows": 1714,
+    "phishing_rate_test": 0.4994
+  },
+  "feature_names": [
+    "url_length",
+    "domain_length",
+    "num_dots",
+    "num_hyphens",
+    "num_subdomains",
+    "num_digits",
+    "has_ip_address",
+    "suspicious_keyword_count",
+    "path_length",
+    "num_special_chars",
+    "has_at_symbol",
+    "is_https",
+    "has_punycode_idn",
+    "has_suspicious_tld",
+    "unusual_encoding_count",
+    "query_length",
+    "num_query_params",
+    "url_entropy",
+    "domain_entropy",
+    "digit_ratio",
+    "has_userinfo_domain",
+    "domain_hyphen_count",
+    "has_non_standard_port",
+    "is_url_shortener",
+    "brand_in_subdomain_or_path"
+  ],
+  "validation_comparison": {
+    "majority_baseline": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "confusion_matrix": {
+        "tn": 857,
+        "fp": 0,
+        "fn": 857,
+        "tp": 0
+      },
+      "roc_auc": 0.5
+    },
+    "logistic_regression": {
+      "accuracy": 0.8121,
+      "precision": 0.8581,
+      "recall": 0.748,
+      "f1_score": 0.7993,
+      "confusion_matrix": {
+        "tn": 751,
+        "fp": 106,
+        "fn": 216,
+        "tp": 641
+      },
+      "roc_auc": 0.8905
+    },
+    "random_forest": {
+      "accuracy": 0.8804,
+      "precision": 0.9005,
+      "recall": 0.8553,
+      "f1_score": 0.8773,
+      "confusion_matrix": {
+        "tn": 776,
+        "fp": 81,
+        "fn": 124,
+        "tp": 733
+      },
+      "roc_auc": 0.953
+    },
+    "xgboost": {
+      "accuracy": 0.8775,
+      "precision": 0.9039,
+      "recall": 0.8448,
+      "f1_score": 0.8733,
+      "confusion_matrix": {
+        "tn": 780,
+        "fp": 77,
+        "fn": 133,
+        "tp": 724
+      },
+      "roc_auc": 0.9518
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.8658,
+    "precision": 0.9013,
+    "recall": 0.8213,
+    "f1_score": 0.8594,
+    "confusion_matrix": {
+      "tn": 781,
+      "fp": 77,
+      "fn": 153,
+      "tp": 703
+    },
+    "roc_auc": 0.9432
+  },
+  "slice_metrics": {
+    "https_urls": {
+      "count": 643,
+      "accuracy": 0.8896,
+      "precision": 0.904,
+      "recall": 0.8278,
+      "f1_score": 0.8642,
+      "confusion_matrix": {
+        "tn": 346,
+        "fp": 24,
+        "fn": 47,
+        "tp": 226
+      },
+      "roc_auc": 0.949
+    },
+    "http_urls": {
+      "count": 1071,
+      "accuracy": 0.8515,
+      "precision": 0.9,
+      "recall": 0.8182,
+      "f1_score": 0.8571,
+      "confusion_matrix": {
+        "tn": 435,
+        "fp": 53,
+        "fn": 106,
+        "tp": 477
+      },
+      "roc_auc": 0.9355
+    }
+  }
+}

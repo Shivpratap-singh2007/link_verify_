@@ -1,0 +1,45 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node & Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# Local dev databases & caches
+*.db
+*.sqlite
+*.sqlite3
+link_verify_local.db
+
+# Large raw datasets (keep directory structure & manifests)
+ml-training/datasets/raw/
+ml-training/datasets/*.csv
+ml-training/datasets/*.zip
+ml-training/datasets/*.parquet
+!ml-training/datasets/.gitkeep
+
+# Logs & OS artifacts
+*.log
+.DS_Store
+Thumbs.db
+
